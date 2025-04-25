@@ -1,0 +1,76 @@
+CREATE DATABESE Faculdade
+-------------------------------------------
+
+CREATE TABLE Curso (
+    Idcurso INT PRIMARY KEY,
+    Descricao VARCHAR(100),
+    Duracao INT,
+    Periodo VARCHAR(20)
+);
+
+--------------------------------------
+
+CREATE TABLE Aluno (
+    Idaluno INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Idade INT,
+    Idcurso INT,
+    FOREIGN KEY (Idcurso) REFERENCES Curso(Idcurso)
+);
+
+-----------------------------------------
+
+ALTER TABLE Aluno
+ADD CONSTRAINT fk_curso
+FOREIGN KEY (Idcurso)
+REFERENCES Curso(Idcurso);
+
+----------------------------------------
+
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (1, 'Engenharia Civil', 10, 'Integral');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (2, 'Direito', 10, 'Noite');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (3, 'Medicina', 12, 'Integral');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (4, 'Administração', 8, 'Manhã');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (5, 'Psicologia', 10, 'Tarde');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (6, 'Arquitetura', 10, 'Integral');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (7, 'Ciência da Computação', 8, 'Noite');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (8, 'Enfermagem', 8, 'Tarde');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (9, 'Educação Física', 8, 'Manhã');
+INSERT INTO Curso (Idcurso, Descricao, Duracao, Periodo) VALUES (10, 'Jornalismo', 8, 'Noite');
+----------------------------------------------------------------------------------------------------------
+
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (1, 'Ana Silva', 20, 1);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (2, 'Bruno Costa', 22, 2);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (3, 'Carla Souza', 21, 3);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (4, 'Diego Martins', 23, 4);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (5, 'Eduarda Lima', 19, 5);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (6, 'Felipe Rocha', 20, 6);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (7, 'Gabriela Mendes', 22, 7);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (8, 'Henrique Alves', 21, 8);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (9, 'Isabela Pires', 20, 9);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (10, 'João Pedro', 22, 10);
+
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (11, 'Karla Dias', 21, 1);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (12, 'Lucas Ferreira', 24, 2);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (13, 'Marina Gonçalves', 20, 3);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (14, 'Natália Ramos', 22, 4);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (15, 'Otávio Lima', 23, 5);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (16, 'Patrícia Duarte', 19, 6);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (17, 'Rafael Nunes', 22, 7);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (18, 'Sabrina Lopes', 20, 8);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (19, 'Thiago Rocha', 21, 9);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (20, 'Vanessa Castro', 22, 10);
+
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (21, 'William Santos', 23, 1);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (22, 'Yasmin Oliveira', 20, 2);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (23, 'Zé Ricardo', 21, 3);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (24, 'Amanda Teixeira', 22, 4);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (25, 'Bruna Figueiredo', 20, 5);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (26, 'Cássio Moreira', 19, 6);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (27, 'Daniele Borges', 21, 7);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (28, 'Eduardo Paiva', 22, 8);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (29, 'Fernanda Meireles', 23, 9);
+INSERT INTO Aluno (Idaluno, Nome, Idade, Idcurso) VALUES (30, 'Gustavo Tavares', 20, 10);
+
+---------------------------------------------------------------------------------------------------------------
+
